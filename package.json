@@ -1,0 +1,22 @@
+{
+  "name": "e-commercessite",
+  "version": "1.0.0",
+  "description": "e-commerce site project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Corona-Sons/e-commercessite.git"
+  },
+  "author": "James, Kat, Vance",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Corona-Sons/e-commercessite/issues"
+  },
+  "homepage": "https://github.com/Corona-Sons/e-commercessite#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
