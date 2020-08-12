@@ -1,13 +1,21 @@
+// npm module imports
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const InitiateMongoServer = require('./config/db');
+const setupDefaultData = require('./config/defaultData');
 
+// application module imports
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+// database setup
+InitiateMongoServer().then(setupDefaultData);
+
+// setting up express
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Router Middleware
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
