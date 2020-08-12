@@ -6,13 +6,20 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const InitiateMongoServer = require('./config/db');
 const setupDefaultData = require('./config/defaultData');
+const create_dumb_product = require('./middleware/create');
 
 // application module imports
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const delete_extra_data = require('./middleware/delete');
 
 // database setup
 InitiateMongoServer().then(setupDefaultData);
+
+// Testing CRUD Operations
+InitiateMongoServer().then(create_dumb_product);
+InitiateMongoServer().then(delete_extra_data);
+
 
 // setting up express
 const app = express();
