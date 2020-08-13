@@ -1,4 +1,5 @@
-const { Product, User } = require("../models/index");
+const { Product } = require('../models/Products');
+const { User } = require('../models/Users');
 
 // CRUD update functionality
 function update_user_info() { 

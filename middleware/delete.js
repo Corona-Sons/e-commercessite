@@ -1,11 +1,13 @@
-const { Product, User } = require("../models/index");
+const { Product } = require('../models/Products');
+const { User } = require('../models/Users');
+
 
 // CRUD delete functionality
-function delete_extra_data() { 
+function delete_operation(model_id) { 
     Product.deleteOne({_id: 4}, function(err) {
         if (err) return handleError(err);
         console.log("Test Product deleted");
     });
 }
 
-module.exports = delete_extra_data;
+module.exports = delete_operation;

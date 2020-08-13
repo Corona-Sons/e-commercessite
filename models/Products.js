@@ -1,9 +1,9 @@
-const mongoose =  require('mongoose');
-const Schema = mongoose.Schema;
+//const User = require('./Users');
+const mongoose = require('mongoose');
 
-const product_schema = new Schema({
-    _id: {
-        type: String,
+const product_schema = new mongoose.Schema({
+    id: {
+        type: Number,
         required: false
     },
     title: {
@@ -17,7 +17,7 @@ const product_schema = new Schema({
         required: true
     },
     seller_id: {
-        type: String,
+        type: Number,
         required: true
     },
     description: {

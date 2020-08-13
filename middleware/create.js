@@ -1,21 +1,27 @@
-const { Product, User } = require('../models/index');
+const { default_product } = require ('../defaults/Default_Products');
+const { default_user } = require ('../defaults/Default_Users');
 
 // CRUD create functionality
-function create_dumb_product() {
-    const product_delete_me = new Product({
-        _id: '4',
-        seller_id: '3',
-        title: 'Delete Test',
-        seller: 'Corona and Sons',
-        description: 'I\'m useless, please delete me.',
-        rating: 0,
-        img: 'https://img.icons8.com/cotton/2x/delete-sign.png'
-    });
+module.exports = {
+    //create_product Property
+    create_operation (create_obj) {
+        console.log('Create');
+        let save_promise = create_obj.save();
 
-    Product.create(product_delete_me, function(err, User) {
-        if (err) return handleError(err);
-        console.log('Test Product Added');
-    });    
+        console.log('Is Promise' + (save_promise instanceof Promise));
+        save_promise.then ((save_obj) => {
+            console.log('ID: ' + save_obj._id);
+            console.log(save_obj);
+        }).catch((err) => {
+            console.log('Error: ', err);
+        });
+
+        if (save_promise === 'undefined'){
+            console.log("NoObjectException", save_promise);
+        } else {
+            console.log(save_promise);
+        }
+
+        return save_promise;
+    }
 }
-
-module.exports = create_dumb_product;

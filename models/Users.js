@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const user_schema = new Schema({
+    id: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     first_name: {
         type: String,
         required: true
@@ -15,7 +20,6 @@ const user_schema = new Schema({
         type: String,
         required: true,
         index: true,
-        unique: true
     },
     admin: {
         type: Boolean,

@@ -4,23 +4,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const InitiateMongoServer = require('./config/db');
-const setupDefaultData = require('./config/defaultData');
-const create_dumb_product = require('./middleware/create');
-
 // application module imports
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const delete_extra_data = require('./middleware/delete');
-const update_user_info = require('./middleware/update');
+
+const InitiateMongoServer = require('./config/db');
+const setupDefaultData = require('./config/defaultData');
+//Setting up my middleware using crud operations
+const create_middleware = require('./middleware/Create');
+const delete_middleware = require('./middleware/Delete');
+const update_middleware= require('./middleware/Update');
+
 
 // database setup
 InitiateMongoServer().then(setupDefaultData);
 
 // Testing CRUD Operations
-InitiateMongoServer().then(create_dumb_product);
-InitiateMongoServer().then(delete_extra_data);
-InitiateMongoServer().then(update_user_info);
+InitiateMongoServer().then(create_middleware);
+InitiateMongoServer().then(delete_middleware);
+InitiateMongoServer().then(update_middleware);
 
 
 // setting up express
