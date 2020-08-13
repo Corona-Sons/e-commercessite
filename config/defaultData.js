@@ -56,7 +56,7 @@ function user_data() {
         first_name: 'Kat',
         middle_name: 'Ninja',
         last_name: 'Lee',
-        email: 'klee@student.neumont.edu',
+        email: 'kalee@student.neumont.edu',
         admin: true,
         member: true,
         password: 'PugMaster.123'

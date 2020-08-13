@@ -14,7 +14,7 @@ function create_dumb_product() {
 
     Product.create(product_delete_me, function(err, User) {
         if (err) return handleError(err);
-        console.log('Test Product Added');
+        console.log('Create Product: Test Product Added');
     });    
 }
 

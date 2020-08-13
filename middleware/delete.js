@@ -4,7 +4,7 @@ const { Product, User } = require("../models/index");
 function delete_extra_data() { 
     Product.deleteOne({_id: 4}, function(err) {
         if (err) return handleError(err);
-        console.log("Test Product deleted");
+        console.log("Delete Product: Test Product deleted");
     });
 }
 
