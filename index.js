@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const { Create } = require('./middleware/Create');
-const { Delete } = require('./middleware/Delete');
-const { Update } = require('./middleware/Update');
+const create = require('./middleware/create');
+const update = require('./middleware/update');
+const default_product = require('./defaults/Default_Products');
+const default_user = require('./defaults/Default_Users');
 
-const { default_product } = require('./defaults/Default_Products')
- 
 let connection_string = "mongodb://127.0.0.1:27017/Coronavirus?retryWrites=true&w=majority";//change connection sstring once vance gives me the password
 //Server discovery and monitoring engine deprecated
 //set to true, our app will use the latest and greatest
@@ -22,8 +21,9 @@ mongoose.set('useNewUrlParser', true);
 mongoose.connect(connection_string).then(
     () => {
         console.log('Connected to MongoDb');
-
-        Create.create_operation(default_product.default_product_01);
+        //create.create_operation(default_product.default_product_01);
+        //create.create_operation(default_user.default_admin02);
+        update.update_operation(default_product.default_product_01);
         //crud.update_product_operation();
         //crud.updated_user_operation();
         //crud.delete_operation();
@@ -34,3 +34,4 @@ mongoose.connect(connection_string).then(
         console.log("Error has occured", error);
     }
 );
+

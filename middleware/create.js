@@ -1,26 +1,17 @@
-const { default_product } = require ('../defaults/Default_Products');
-const { default_user } = require ('../defaults/Default_Users');
-
 // CRUD create functionality
 module.exports = {
-    //create_product Property
-    create_operation (create_obj) {
+    create_operation (default_create) {
         console.log('Create');
-        let save_promise = create_obj.save();
-
-        console.log('Is Promise' + (save_promise instanceof Promise));
-        save_promise.then ((save_obj) => {
-            console.log('ID: ' + save_obj._id);
-            console.log(save_obj);
+        //console.log(default_create);
+        //promises the executing function returns a special object to you (the promise) and then you tell the promise what to do
+        let save_promise = default_create.save();
+        // True or False if we are getting a promise back
+        save_promise.then ((save_product) => {
+            console.log('ID: ' + save_product._id);
+            console.log(save_product);
         }).catch((err) => {
             console.log('Error: ', err);
         });
-
-        if (save_promise === 'undefined'){
-            console.log("NoObjectException", save_promise);
-        } else {
-            console.log(save_promise);
-        }
 
         return save_promise;
     }

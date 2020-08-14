@@ -17,7 +17,7 @@ const product_schema = new mongoose.Schema({
         required: true
     },
     seller_id: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {
