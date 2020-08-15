@@ -4,7 +4,7 @@ const update = require('./middleware/update');
 const default_product = require('./defaults/Default_Products');
 const default_user = require('./defaults/Default_Users');
 
-let connection_string = "mongodb://127.0.0.1:27017/Coronavirus?retryWrites=true&w=majority";//change connection sstring once vance gives me the password
+let connection_string = "mongodb+srv://vancerweston:Crance.2017@cluster0.vr4hu.mongodb.net/E-Commerce?retryWrites=true&w=majority";//change connection sstring once vance gives me the password
 //Server discovery and monitoring engine deprecated
 //set to true, our app will use the latest and greatest
 mongoose.set('useUnifiedTopology', true);

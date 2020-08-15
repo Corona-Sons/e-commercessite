@@ -2,7 +2,7 @@ const { Product } = require('../models/Products');
 const { User } = require('../models/Users');
 
 module.exports = {
-    delete_operation(delete_id) {
+    delete_operation(default_delete) {
         console.log("Delete");
         
         user.findOneAndDelete(

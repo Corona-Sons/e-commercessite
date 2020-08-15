@@ -27,7 +27,7 @@ updated_product = new product({
 default_product_01 = new product ({
     _id: product._id,
     seller_id: user._id,
-    title: 'Sanitizer',
+    title: 'Germ-X',
     seller: 'Nu',
     description: 'Kills 99% of Germs',
     rating: 5,
