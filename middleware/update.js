@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const product = require('../models/Products');
 const user = require('../models/Users');
 
@@ -52,9 +53,12 @@ module.exports = {
 
 
 
+=======
+const { Product, User } = require("../models/index");
+>>>>>>> 039c0b9d936ae9ce5d50a84a565a091e39e7a46c
 
 // CRUD update functionality
-/*function update_user_info() { 
+function update_user_info() { 
     let falseEmail = User.find({email: 'klee@student.neumont.edu'});
 
     if (falseEmail.value) {
@@ -67,5 +71,4 @@ module.exports = {
     }
 }
 
-
-module.exports = update_user_info;*/
+module.exports = update_user_info;

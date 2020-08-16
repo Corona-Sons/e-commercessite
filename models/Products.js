@@ -1,9 +1,14 @@
-//const User = require('./Users');
-const mongoose = require('mongoose');
+const mongoose =  require('mongoose');
+const Schema = mongoose.Schema;
 
+<<<<<<< HEAD
 const product_schema = new mongoose.Schema({
     //Why do i need an id hen theres a built in object number generator
     id: {
+=======
+const product_schema = new Schema({
+    _id: {
+>>>>>>> 039c0b9d936ae9ce5d50a84a565a091e39e7a46c
         type: String,
         required: false
     },
@@ -23,6 +28,10 @@ const product_schema = new mongoose.Schema({
     },
     description: {
         type: String,
+        required: true
+    },
+    price: {
+        type: Number,
         required: true
     },
     rating: {

@@ -1,4 +1,7 @@
+const { Product, User } = require('../models/index');
+
 // CRUD create functionality
+<<<<<<< HEAD
 module.exports = {
     create_operation (default_create) {
         console.log('Create');
@@ -13,7 +16,23 @@ module.exports = {
         }).catch((err) => {
             console.log('Error: ', err);
         });
+=======
+function create_dumb_product() {
+    const product_delete_me = new Product({
+        _id: '4',
+        seller_id: '3',
+        title: 'Delete Test',
+        seller: 'Corona and Sons',
+        description: 'I\'m useless, please delete me.',
+        rating: 0,
+        img: 'https://img.icons8.com/cotton/2x/delete-sign.png'
+    });
+>>>>>>> 039c0b9d936ae9ce5d50a84a565a091e39e7a46c
 
-        return save_promise;
-    }
+    Product.create(product_delete_me, function(err, User) {
+        if (err) return handleError(err);
+        console.log('Create Product: Test Product Added');
+    });    
 }
+
+module.exports = create_dumb_product;
