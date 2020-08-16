@@ -33,13 +33,13 @@ MongoClient.connect(url, function(err, client) {
   /* GET home page. */
   router.get('/', async function(req, res, next) {
     const products = await findProducts();
-    res.render('home', { products, title: 'One Stop COVID-19 Shop' });
+    res.render('home', { products, title: 'Corona & Sons: One Stop COVID-19 Shop' });
   });
 
  /* GET catalog page. */
  router.get('/catalog', async function(req, res, next) {
   const products = await findProducts();
-  res.render('catalog', { products, title: 'One Stop COVID-19 Shop' });
+  res.render('catalog', { products, title: 'Corona & Sons: One Stop COVID-19 Shop' });
 });
 
   /* GET profile page */
