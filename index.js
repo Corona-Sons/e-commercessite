@@ -22,8 +22,8 @@ mongoose.connect(connection_string).then(
     () => {
         console.log('Connected to MongoDb');
         //create.create_operation(default_product.default_product_01);
-        //create.create_operation(default_user.default_admin02);
-        update.update_operation(default_product.default_product_01);
+        create.create_operation(default_user.default_admin04);
+       // update.update_operation(default_product.default_product_01);
         //crud.update_product_operation();
         //crud.updated_user_operation();
         //crud.delete_operation();

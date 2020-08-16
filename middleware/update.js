@@ -10,6 +10,11 @@ module.exports = {
 
             {_id: default_update._id},
             {title: default_update.title},
+            {seller_id: default_update.seller_id},
+            {seller: default_update.seller},
+            {description: default_update.description},
+            {rating: default_update.rating},
+            {img: default_update.img},
             {new: true},
 
             (err, default_updates) => {

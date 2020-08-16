@@ -5,30 +5,30 @@ let rand = require('random-seed').create;
 
 default_product = new product({
     //check if id's are the same
-    _id: product._id,
-    seller_id: user._id,
-    title: product.title,
+    id: rand(100) -1,
     seller: product.seller,
+    title: product.title,
+    seller_id: user._id,
     description: product.description,
     rating: product.rating,
     img: product.img
 });
 
 updated_product = new product({
-    _id: product._id,
-    seller_id: user._id,
-    title: 'Germ-Y',
+    id: rand(100) - 1,
     seller: 'E-Bay',
+    title: 'Germ-Y',
+    seller_id: '6',
     description: 'Keeps your hands clean',
     rating: 10,
     img: 'https://img.icons8.com/cotton/2x/delete-sign.png'
 });
 
 default_product_01 = new product ({
-    _id: product._id,
-    seller_id: user._id,
-    title: 'Germ-X',
+    id: rand(100) - 1,
     seller: 'Nu',
+    title: 'Germ-X',
+    seller_id: '5',
     description: 'Kills 99% of Germs',
     rating: 5,
     img: 'https://img.icons8.com/cotton/2x/delete-sign.png'

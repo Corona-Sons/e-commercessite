@@ -1,7 +1,10 @@
 const user = require('../models/Users');
+const { use } = require('../routes');
+
+let rand = require('random-seed').create;
 
 default_admin = new user({
-    _id: user._id,
+    id: user.id,
     first_name: user.first_name,
     middle_name: user.middle_name,
     last_name: user.last_name,
@@ -12,7 +15,7 @@ default_admin = new user({
 }); 
 
 default_admin02 = new user({
-    _id: user._id,
+    id: rand(100) - 1,
     first_name: 'Kat',
     middle_name: 'Ninja',
     last_name: 'Lee',
@@ -23,7 +26,7 @@ default_admin02 = new user({
 });
 
 default_admin03 = new user({
-    _id: user._id,
+    id: rand(100) -1,
     email: 'vweston@student.neumont.edu',
     first_name: 'Vance',
     middle_name: 'Superman',
@@ -34,7 +37,7 @@ default_admin03 = new user({
 });
 
 default_admin04 = new user({
-    _id: user._id,
+    id: rand(100)-1,
     email: 'ctayor@student.neumont.edu',
     first_name: 'Coy',
     middle_name: 'Sr.',
@@ -46,7 +49,9 @@ default_admin04 = new user({
 
 module.exports = {
     default_admin,
-    default_admin02
+    default_admin02,
+    default_admin04,
+    default_admin03
 }
 
 
