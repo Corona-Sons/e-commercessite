@@ -1,11 +1,8 @@
 const product = require('../models/Products');
 const user = require('../models/Users');
 
-let rand = require('random-seed').create;
-
 default_product = new product({
     //check if id's are the same
-    id: rand(100) -1,
     seller: product.seller,
     title: product.title,
     seller_id: user._id,
@@ -14,8 +11,7 @@ default_product = new product({
     img: product.img
 });
 
-updated_product = new product({
-    id: rand(100) - 1,
+updated_product_02 = new product({
     seller: 'E-Bay',
     title: 'Germ-Y',
     seller_id: '6',
@@ -25,7 +21,6 @@ updated_product = new product({
 });
 
 default_product_01 = new product ({
-    id: rand(100) - 1,
     seller: 'Nu',
     title: 'Germ-X',
     seller_id: '5',
@@ -36,4 +31,5 @@ default_product_01 = new product ({
 
 module.exports = {
     default_product_01,
+    updated_product_02
 }
