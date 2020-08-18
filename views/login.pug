@@ -2,18 +2,21 @@ extends layout
 
 block content
   div(class='grid')
-    form(action="#")
-      div.label Login Form
-      div.email
-        label(for='email') Email:
-        input(type="string" placeholder="name@email.com")
-      div.password
-        label(for='pw') Password:
-        input(type="string" placeholder="Enter Password...")
-      div.checkbox
-        input(type='checkbox' name='agreement' checked)
-        |Remember me
-      button(type="button") Login
-      p
-        | Not a member
-        a(href="/signup") Sign Up Now
+    form(action="." method="POST")
+      label(for="email") Email:
+      input(
+      type="email"
+      id="email"
+      name="email"
+      placeholder="name@email.com"
+  )
+      label(for="pw") Password:
+      input(
+      type="string"
+      id="password"
+      name="password"
+  )
+  input(type="submit" value="Submit")
+  p
+  | Not a member
+  a(href="/signup") Sign Up Now
