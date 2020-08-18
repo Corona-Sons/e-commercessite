@@ -29,11 +29,16 @@ MongoClient.connect(url, function(err, client) {
   // }
     // use when login is built ^
 
+    // Find Featured Product
+  const featuredProduct = function() {
+    const collection = db.collection('products');
+    return collection.find({ '_id': '4' }).toArray();
+  }
 
   /* GET home page. */
   router.get('/', async function(req, res, next) {
-    const products = await findProducts();
-    res.render('home', { products, title: 'Corona & Sons: One Stop COVID-19 Shop' });
+    const product = await featuredProduct();
+    res.render('home', { product, title: 'Corona & Sons: One Stop COVID-19 Shop' });
   });
 
  /* GET catalog page. */
