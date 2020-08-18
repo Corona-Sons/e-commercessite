@@ -3,20 +3,36 @@ extends layout
 block content
   div(class='grid')
     div(class='About Us')
-      h2= 'About Us:'
+      h2 About Us
       p Corona & Sons was created in a truck stop bathroom...
     div(class='missionStatement')
-      h2= 'Mission Statement:'
+      h2 Mission Statement:
       p Is COVID-19 driving you crazy? Corona & Sons has you covered! 
       p From hand sanitizers to masks, we are here to help protect you during these uncertain times.
     div(class='content')
-      h2= 'Featured Product:'
-        h3= 'COVID Couple Love: The couple who quarantines together, breaks up'
-        img(src='20200601_163011-2.jpg', alt="couple_face_masks")
-    div(class='monthlyNewsletter')
-      h2= 'Monthly Newsletter:'
+      h2 Featured Product
+        if product.length == 0
+          p No product to display...
+        else
+          each val in product
+              h3=val.title
+                  span(id='product' class='material-icons' data-product-id=val._id) 
+                  // switch to an icon ^
+              div(class='content')
+                  - var pic= val.img
+                  img(src=pic, alt="Your Browser Doesn't Support Our Image, Sorry.")
+                  p Sold By: 
+                  p=val.seller
+      h2 Monthly Newsletter
         a(href='https://docs.google.com/document/d/1gaW6j945sv5H9RmibNZYOiCdJssq4WSyQEgd6Ko0CHk/edit#') August
-    
+
+
+
+
+
+
+
+
 
 
 
