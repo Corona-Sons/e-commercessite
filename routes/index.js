@@ -41,6 +41,18 @@ MongoClient.connect(url, function(err, client) {
     res.render('home', { product, title: 'Corona & Sons: One Stop COVID-19 Shop' });
   });
 
+  /* GET login page. */
+  router.get('/login', async function(req, res, next) {
+    const product = await featuredProduct();
+    res.render('login', { product, title: 'Member Login' });
+  });
+
+  /* GET sign up page. */
+  router.get('/signup', async function(req, res, next) {
+    const product = await featuredProduct();
+    res.render('signup', { product, title: 'New Member Sign Up' });
+  });
+
  /* GET catalog page. */
  router.get('/catalog', async function(req, res, next) {
   const products = await findProducts();
