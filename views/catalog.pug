@@ -2,9 +2,33 @@ extends layout
 
 block content
     div(class='grid')
-        
+        h1 Product Catalog 
+        div(class='search')
+            input(type='text', placeholder='Search...')
+            button(class='searchButton', id="browseProducts") Submit
+        div(class='allProducts')
+            div(class='productFeed')
+                if products.length == 0
+                    p No Products to display...
+                else
+                    each val in products
+                        h3=val.title
+                            span(id='product' class='material-icons' data-product-id=val._id) 
+                            // switch to an icon ^
+                        div(class='content')
+                            - var pic= val.img
+                            img(src=pic, alt="Your Browser Doesn't Support Our Image, Sorry.")
+                            p Sold By: 
+                            p=val.seller
+                            span $ 
+                                //might switch span $ to an icon
+                            p=val.price
+                            p=val.description
+                            span=val.rating
+                                //want to do a star icon based on rating
 
-        // will show all products currently available on our site. 
-        // Each product will have a thumbnail image, name, and price 
-        // displayed on the catalog page. 
-        // Clicking any one product takes you to the products page. 
+
+            
+
+
+
