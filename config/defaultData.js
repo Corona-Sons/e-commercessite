@@ -44,12 +44,23 @@ function product_data() {
         rating: 5,
         img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnifey.com%2Fwear-your-heart-on-your-mask-like-sofia-richie-with-this-adorable-2-pack-6154.html&psig=AOvVaw1GWwKl8sTcCeCAGKzZ8JZl&ust=1597693195078000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDZxZK9oOsCFQAAAAAdAAAAABAD'
     });
+    const product_five = new Product({
+        _id: '5',
+        seller_id: '1',
+        title: 'Athletic Face Masks',
+        seller: 'Kat Lee',
+        description: 'Stylish face masks for the athletic mom.',
+        price: 20,
+        rating: 5,
+        img: '20200601_163011-2.jpg'
+    });
 
     const save_promise_one = product_one.save();
     const save_promise_two = product_two.save();
     const save_promise_three = product_three.save();
     const save_promise_four = product_four.save();
-    return Promise.all([save_promise_one, save_promise_two, save_promise_three, save_promise_four])
+    const save_promise_five = product_five.save();
+    return Promise.all([save_promise_one, save_promise_two, save_promise_three, save_promise_four, save_promise_five])
         .then(() => console.log('Default products added to database'))
         .catch(() => console.log('Default products already exist in your database'));
 }
