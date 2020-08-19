@@ -34,11 +34,22 @@ function product_data() {
         rating: 5,
         img: 'https://b3h2.scene7.com/is/image/BedBathandBeyond/7518112555423p?$690$&wid=690&hei=690'
     });
+    const product_four = new Product({
+        _id: '4',
+        seller_id: '1',
+        title: 'COVID Couple Love Face Masks',
+        seller: 'Kat Lee',
+        description: 'The couple who quarantines together, breaks up. Our face masks will always be there for you.',
+        price: 10,
+        rating: 5,
+        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnifey.com%2Fwear-your-heart-on-your-mask-like-sofia-richie-with-this-adorable-2-pack-6154.html&psig=AOvVaw1GWwKl8sTcCeCAGKzZ8JZl&ust=1597693195078000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDZxZK9oOsCFQAAAAAdAAAAABAD'
+    });
 
     const save_promise_one = product_one.save();
     const save_promise_two = product_two.save();
     const save_promise_three = product_three.save();
-    return Promise.all([save_promise_one, save_promise_two, save_promise_three])
+    const save_promise_four = product_four.save();
+    return Promise.all([save_promise_one, save_promise_two, save_promise_three, save_promise_four])
         .then(() => console.log('Default products added to database'))
         .catch(() => console.log('Default products already exist in your database'));
 }
