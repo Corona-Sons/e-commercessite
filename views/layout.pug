@@ -4,32 +4,29 @@ html
   title= title
   link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    div(class='grid')
-      h1= title
-        nav#navbar-default  
+    div(class='topnav')
       div.container-fluid
         ul
-          li
-            a(href='/') Home
-          li
-            a(href='/catalog') Product Catalog
-          li
-            a(href='/login') Login
-          li
-            a(href='/signup') Sign Up
-    block content 
-    footer#footer
-      nav#navbar-default
-    div.container-fluid
+            a(class = 'active' href='/') Home
         ul
-          li
-            a(href='/') Home
-          li
             a(href='/catalog') Product Catalog
-          li
+        ul
             a(href='/login') Login
-          li
+        ul
             a(href='/signup') Sign Up
+  block content 
+  footer#footer
+  nav#navbar-default
+    div(class='botnav')
+      div.container-fluid
+        ul
+          a(href='/') Home
+        ul
+          a(href='/catalog') Product Catalog
+        ul
+          a(href='/login') Login
+        ul
+          a(href='/signup') Sign Up
         p Copyright (c) 2020 Corona & Sons, Inc.
 
 
