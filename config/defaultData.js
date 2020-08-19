@@ -42,7 +42,7 @@ function product_data() {
         description: 'The couple who quarantines together, breaks up. Our face masks will always be there for you.',
         price: 10,
         rating: 5,
-        img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnifey.com%2Fwear-your-heart-on-your-mask-like-sofia-richie-with-this-adorable-2-pack-6154.html&psig=AOvVaw1GWwKl8sTcCeCAGKzZ8JZl&ust=1597693195078000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDZxZK9oOsCFQAAAAAdAAAAABAD'
+        img: 'https://i.etsystatic.com/6999701/d/il/c0a182/2498368087/il_340x270.2498368087_kc0b.jpg?version=0'
     });
     const product_five = new Product({
         _id: '5',
@@ -52,7 +52,7 @@ function product_data() {
         description: 'Stylish face masks for the athletic mom.',
         price: 20,
         rating: 5,
-        img: '20200601_163011-2.jpg'
+        img: 'https://preview.thenewsmarket.com/Previews/ADID/StillAssets/640x480/563917.jpg'
     });
 
     const save_promise_one = product_one.save();

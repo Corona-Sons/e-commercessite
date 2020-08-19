@@ -19,11 +19,8 @@ block content
                                 div.content
                                     - var pic= val.img
                                     img(class="productPart", src=pic, alt="Your Browser Doesn't Support Our Image, Sorry.")
-                                    p Sold By: 
-                                    p.productPart=val.seller
-                                    span $ 
-                                        //might switch span $ to an icon
-                                    p.productPart=val.price
+                                    p.productPart='Sold By: ' + val.seller
+                                    p.productPart='$ ' + val.price
                                     p.productPart=val.description
                                     span.productPart=val.rating
                                         //want to do a star icon based on rating
@@ -33,9 +30,7 @@ block content
             h1#title
             div(class='content')
                 img(src='', alt="Your Browser Doesn't Support Our Image, Sorry.", id='img')
-                p Sold By:
                 p#seller
-                span $
                 p#price
                 p#description
                 p#rating

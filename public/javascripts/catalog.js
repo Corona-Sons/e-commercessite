@@ -15,8 +15,8 @@ function selectedProduct(id) {
 
     h1.innerHTML = product[0].innerHTML;
     img.setAttribute('src', product[1].src);
-    pS.innerHTML = product[2].innerHTML;
-    pP.innerHTML = product[3].innerHTML;
+    pS.innerHTML =product[2].innerHTML;
+    pP.innerHTML =product[3].innerHTML;
     pD.innerHTML = product[4].innerHTML;
     span.innerHTML = product[5].innerHTML;
 
