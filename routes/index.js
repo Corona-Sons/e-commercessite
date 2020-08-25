@@ -88,16 +88,7 @@ MongoClient.connect(url, function(err, client) {
 
   //});
 
-  //use create to insert doc into mongo
-
-    // User.create(userData, function(error, user) {
-    //  if (error) {
-     // return next(error);
-     // } else {
-       // req.session.userId = user._id;
-     //   return res.redirect("/profile");
-    //  }
-   // });
+  
 //}
 //});
 
