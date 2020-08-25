@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+//var User = require('./models/Users.js');
 const assert = require('assert');
 const MongoClient = require('mongodb').MongoClient;
 
@@ -22,6 +23,12 @@ MongoClient.connect(url, function(err, client) {
     return collection.find().toArray();
   }
 
+  // Find Featured Product
+  const featuredProduct = function() {
+    const collection = db.collection('products');
+    return collection.find({ '_id': '4' }).toArray();
+  }
+
   // Find User Specific Products
   // const userProducts = function(seller_id) {
   //   const collection = db.collection('products');
@@ -29,11 +36,7 @@ MongoClient.connect(url, function(err, client) {
   // }
     // use when login is built ^
 
-    // Find Featured Product
-  const featuredProduct = function() {
-    const collection = db.collection('products');
-    return collection.find({ '_id': '4' }).toArray();
-  }
+    
 
   /* GET home page. */
   router.get('/', async function(req, res, next) {
@@ -47,13 +50,69 @@ MongoClient.connect(url, function(err, client) {
     res.render('login', { product, title: 'Member Login' });
   });
 
+  // Kat's signup stuff //
   /* GET sign up page. */
   router.get('/signup', async function(req, res, next) {
     const product = await featuredProduct();
     res.render('signup', { product, title: 'New Member Sign Up' });
   });
 
- /* GET catalog page. */
+  // post /signup
+//router.post("/signup", function(req, res, next) {
+  //if (
+    //req.body.first_name &&
+    //req.body.middle_name &&
+    //req.body.last_name &&
+    //req.body.email &&
+    //req.body.user_name &&
+    //req.body.password &&
+    //req.body.confirmPassword
+  //) {
+
+  // confirm passwords match
+  //if (req.body.password !== req.body.confirmPassword) {
+  //var err = new Error("Passwords do not match.");
+    //err.status = 400;
+    //return next(err);
+ // }
+
+  //create object with form input
+  //var userData = {
+   // first_name: req.body.first_name,
+    //middle_name: req.body.middle_name,
+   // last_name: req.body.last_name,
+   // email: req.body.email,
+   // user_name: req.body.user_name,
+   // password: req.body.password
+  //};
+
+  //});
+
+  //use create to insert doc into mongo
+
+    // User.create(userData, function(error, user) {
+    //  if (error) {
+     // return next(error);
+     // } else {
+       // req.session.userId = user._id;
+     //   return res.redirect("/profile");
+    //  }
+   // });
+//}
+//});
+
+/////end of Kat's stuff/////
+
+
+
+  
+
+    /* GET users listing. */
+//router.get('/', function(req, res, next) {
+ // res.send('respond with a resource');
+//});
+
+  /* GET catalog page. */
  router.get('/catalog', async function(req, res, next) {
   const products = await findProducts();
   res.render('catalog', { products, title: 'Corona & Sons: One Stop COVID-19 Shop' });
@@ -61,11 +120,11 @@ MongoClient.connect(url, function(err, client) {
 
   /* GET profile page */
   router.get('/profile', async function(req, res, next) {
-    const products = await findProducts();
-    // const userId = req.query.id;
-    // const products = await userProducts(userId);
-      // Once login is set up switch to this ^
-    res.render('profile', {products});
+  const products = await findProducts();
+     //const userId = req.query.id;
+     //const products = await userProducts(userId);
+       //Once login is set up switch to this ^
+   res.render('profile', {products});
   })
 
 });
