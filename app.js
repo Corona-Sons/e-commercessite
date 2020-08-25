@@ -2,7 +2,11 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var bodyParser= require('body-parser')
+const bcrypt = require('bcrypt');
+var session = require("express-session");
+//var passport = require("passport");
+var User = require('./models/Users.js');
+//var bodyParser= require('body-parser')
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const InitiateMongoServer = require('./config/db');
@@ -33,16 +37,67 @@ app.set('view engine', 'pug');
 
 
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(express.json());
-//app.use(express.urlencoded({ extended: false }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// make user ID available in templates
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.session.userID;
+  next();
+});
+
+
 
 // Router Middleware
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+///signup///
+app.get('/signup', (req, res) => {
+  res.render('signup.pug')
+})
+
+app.post('/signup', async(req, res) => {
+  try {
+    const hashedPassword = await bcrypt.hash(req.body.password, 10)
+    User.create({
+      first_name: req.body.first_name,
+      middle_name: req.body.middle_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      user_name: req.body.user_name,
+      password: hashedPassword
+    })
+    res.redirect('/login')
+  } catch {
+    res.redirect.signup
+
+  }
+});
+  //confirm passwords match
+  //if (req.body.password !== req.body.confirmPassword) {
+    //var err = new Error("Passwords do not match.");
+      //err.status = 400;
+      //return next(err);
+  // }
+  //});
+
+   
+   //use create to insert doc into mongo
+   //User.create(function(error, user) {
+     // if (error) {
+     //return next(error);
+     // } else {
+       // req.session.User_id = User_id;
+       // return res.redirect("/profile");
+     // }
+   //});
+  
+//})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
