@@ -7,32 +7,33 @@ block content
         form(method='POST' action='/signup')
             div.form-group
                 label(for='first_name') First Name:
-                input#first_name.form-control(type='text', placeholder='first' name='first_name')
+                input#first_name.form-control(type='text', placeholder='first' name='first_name' required)
 
             div.form-group
                 label(for='middle_name') Middle Name:
-                input#middle_name.form-control(type='text', placeholder='middle' name='middle_name')
+                input#middle_name.form-control(type='text', placeholder='middle' name='middle_name' required)
 
             div.form-group
                 label(for='last_name') Last Name:
-                input#last_name.form-control(type='text', placeholder='last' name='last_name')
+                input#last_name.form-control(type='text', placeholder='last' name='last_name' required)
 
             div.form-group
                 label(for='email') Email:
-                input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                input#email.form-control(type='email', placeholder='name@email.com' name='email' required)
 
             div.form-group
                 label(for='user_name') Username:
-                input#user_name.form-control(type='text', placeholder='first and last names' name='user_name')
+                input#user_name.form-control(type='text', placeholder='first and last names' name='user_name' required)
 
 
             div.form-group
                 label(for='pw') Password:
-                input#pw.form-control(type='password' name='password')
+                input#pw.form-control(type='password' name='password' required)
 
             div.form-group
                 label(for='pw2') Confirm Password:
-                input#pw2.form-control(type='password' name='confirmPassword')
+                input#pw2.form-control(type='password' name='confirmPassword' required)
 
             button.btn.btn-primary(type='submit') Sign Up
+            a(href="/login") Login
 
