@@ -45,10 +45,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // make user ID available in templates
-app.use(function (req, res, next) {
-  res.locals.currentUser = req.session.userID;
-  next();
-});
+//app.use(function (req, res, next) {
+//  res.locals.currentUser = req.session.userID;
+ // next();
+//});
 
 
 
