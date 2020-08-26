@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-//var User = require('./models/Users.js');
 const assert = require('assert');
 const MongoClient = require('mongodb').MongoClient;
 
@@ -36,81 +35,11 @@ MongoClient.connect(url, function(err, client) {
   // }
     // use when login is built ^
 
-    
-
   /* GET home page. */
   router.get('/', async function(req, res, next) {
     const product = await featuredProduct();
     res.render('home', { product, title: 'Corona & Sons: One Stop COVID-19 Shop' });
   });
-
-  /* GET login page. */
-  router.get('/login', async function(req, res, next) {
-    const product = await featuredProduct();
-    res.render('login', { product, title: 'Member Login' });
-  });
-
-  // Kat's signup stuff //
-  /* GET sign up page. */
-  router.get('/signup', async function(req, res, next) {
-    const product = await featuredProduct();
-    res.render('signup', { product, title: 'New Member Sign Up' });
-  });
-
-  /*GET Mission Statement*/
-  router.get('/mission', async function(req,res, next) {
-    res.render('mission', {title: 'Mission Statement' });
-  });
-
-  router.get('/about', async function(req, res, next) {
-    res.render('/about', {title: 'About Us'});
-  });
-
-  // post /signup
-//router.post("/signup", function(req, res, next) {
-  //if (
-    //req.body.first_name &&
-    //req.body.middle_name &&
-    //req.body.last_name &&
-    //req.body.email &&
-    //req.body.user_name &&
-    //req.body.password &&
-    //req.body.confirmPassword
-  //) {
-
-  // confirm passwords match
-  //if (req.body.password !== req.body.confirmPassword) {
-  //var err = new Error("Passwords do not match.");
-    //err.status = 400;
-    //return next(err);
- // }
-
-  //create object with form input
-  //var userData = {
-   // first_name: req.body.first_name,
-    //middle_name: req.body.middle_name,
-   // last_name: req.body.last_name,
-   // email: req.body.email,
-   // user_name: req.body.user_name,
-   // password: req.body.password
-  //};
-
-  //});
-
-  
-//}
-//});
-
-/////end of Kat's stuff/////
-
-
-
-  
-
-    /* GET users listing. */
-//router.get('/', function(req, res, next) {
- // res.send('respond with a resource');
-//});
 
   /* GET catalog page. */
  router.get('/catalog', async function(req, res, next) {

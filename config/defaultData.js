@@ -70,7 +70,6 @@ function user_data() {
 
     const user_one = new User({
         first_name: 'Vance',
-        middle_name: 'Superman',
         last_name: 'Weston',
         email: 'vweston@student.neumont.edu',
         admin: true,
@@ -79,7 +78,6 @@ function user_data() {
     });
     const user_two = new User({
         first_name: 'Kat',
-        middle_name: 'Ninja',
         last_name: 'Lee',
         email: 'kalee@student.neumont.edu',
         admin: true,
@@ -88,7 +86,6 @@ function user_data() {
     });
     const user_three = new User({
         first_name: 'James',
-        middle_name: 'Thabiso',
         last_name: 'Taylor',
         email: 'jtaylor@student.neumont.edu',
         admin: true,
