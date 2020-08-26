@@ -5,9 +5,9 @@ block content
         div#catalogPage
             h1 Product Catalog
 
-            form(class='search' action='/catalog' style='margin:auto;max-width:300px')
+            form(class='search' action='/catalog')
                 div.form-group
-                    input(type='text', name='search2', placeholder='Browse products...')
+                    input(class="browse" type='text', name='search2', placeholder='Browse products...')
                     button(type='submit') Search
             div(class='allProducts')
                 div(class='productFeed')
