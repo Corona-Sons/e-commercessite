@@ -3,10 +3,12 @@ extends layout
 block content
     div(class='grid')
         div#catalogPage
-            h1 Product Catalog 
-            div(class='search')
-                input(type='text', placeholder='Search...')
-                button(class='searchButton', id="browseProducts") Submit
+            h1 Product Catalog
+
+            form(class='search' action='/catalog' style='margin:auto;max-width:300px')
+                div.form-group
+                    input(type='text', name='search2', placeholder='Browse products...')
+                    button(type='submit') Search
             div(class='allProducts')
                 div(class='productFeed')
                     if products.length == 0
@@ -40,7 +42,7 @@ block content
 
 
 
-            
+
 
 
 
