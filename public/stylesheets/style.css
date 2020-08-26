@@ -1,14 +1,11 @@
 body {
   padding: 50px;
-<<<<<<< Updated upstream
-=======
+  background-color: lightgoldenrodyellow;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #F5BB00;
->>>>>>> Stashed changes
 }
 
 a {
-  color: #00B7FF;
+  color: black;
 }
 
 img {
@@ -22,12 +19,11 @@ img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-/* Form Styling */
-
 form {
-  background-color: rgba(60, 89, 107, 0.63);
+  background-color: #717171;
   width: 40%;
   padding: 30px;
+  line-height: 1.6;
 }
 
 .username input,
@@ -46,14 +42,23 @@ button:focus {
 }
 
 button {
-  background: #63cdda;
+  background: #333333;
   color: #fff;
   border: 0px;
-  width: 100%;
+  max-width:300px;
   padding: 10px;
   margin: 5px;
   font-size: 24px;
   cursor: pointer;
+}
+
+#footer {
+  color: white;
+}
+
+.browse {
+  width: 400px;
+  height: 50px;
 }
 
 .checkbox {
@@ -64,16 +69,14 @@ button {
 h3 {
   font-size: 24px;
   text-align: center;
-  color: #fff;
+  color: black;
   text-transform: capitalize;
   margin-bottom: 10px;
 }
 
-<<<<<<< Updated upstream
-=======
 p {
+  color: black;
   text-align: center;
-  color: #fff;
   text-transform: capitalize;
 }
 
@@ -88,7 +91,6 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -96,7 +98,7 @@ p {
   color: black;
 }
 
-.topnav a.active {
+.topnav a.acti ve {
   background-color: #8EA604;
   color: white;
 }
@@ -120,12 +122,7 @@ p {
   color: black;
 }
 
-.botnav a.active {
-  background-color: #8EA604;
-  color: white;
-}
-
-* {box-sizing:border-box}
+* { box-sizing: border-box}
 
 /* Slideshow container */
 .slideshow-container {
@@ -151,8 +148,6 @@ p {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -161,12 +156,12 @@ p {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a black background color with a little see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
+/*Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -182,17 +177,14 @@ p {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #bbbbbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -219,8 +211,7 @@ p {
   from {opacity: .4}
   to {opacity: 1}
 }
->>>>>>> Stashed changes
-/* End of form styling */
+
 
 
 
