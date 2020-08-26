@@ -1,22 +1,25 @@
 doctype html
 html
   head
-  title= title
-  link(rel='stylesheet', href='/stylesheets/style.css')
+    title Coronavirus
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src='/javascripts/slides.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
   body
     div(class='topnav')
       div.container-fluid
-        ul
-            a(class = 'active' href='/') Home
-        ul
-            a(href='/catalog') Product Catalog
-        ul
-            a(href='/login') Login
-        ul
-            a(href='/signup') Sign Up
+        a(href="/" class='active') Home
+        a(href="/login") Login
+        a(href="/signup") Sign Up
+        a(href="/catalog") Product Catalog
+        div(class="dropdown") 
+          button(href="/news" class='dropbtn' onclick='dropDown()') News
+          div(class="dropdown-content" id="myDropdown")
+            a(href="/monthly") Monthly News Letter
+            a(href='/about') About Us
+ 
   block content 
-  footer#footer
-  nav#navbar-default
+  footer
     div(class='botnav')
       div.container-fluid
         ul
@@ -27,7 +30,14 @@ html
           a(href='/login') Login
         ul
           a(href='/signup') Sign Up
-        p Copyright (c) 2020 Corona & Sons, Inc.
+        ul 
+          a(href='/mission') Mission Statement
+        ul
+          a(href='/about') About Us
+        ul
+          a Copyright (c) 2020 Corona & Sons Inc.
+
+script(src='javascripts/navbar.js')
 
 
 
