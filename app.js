@@ -4,7 +4,10 @@ var express = require('express');
 var path = require('path');
 const bcrypt = require('bcrypt');
 var session = require("express-session");
-//var passport = require("passport");
+const passport = require('passport');
+//const initializePassport = require('./passport-config');
+//initializePassport(passport);
+
 var User = require('./models/Users.js');
 //var bodyParser= require('body-parser')
 var cookieParser = require('cookie-parser');
