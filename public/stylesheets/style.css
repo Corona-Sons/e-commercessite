@@ -1,13 +1,7 @@
 body {
   padding: 50px;
-<<<<<<< Updated upstream
   background-color: lightgoldenrodyellow;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-=======
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-family: Verdana, sans-serif; margin:0;
-  background-color: #F5BB00;
->>>>>>> Stashed changes
 }
 
 a {
@@ -72,10 +66,6 @@ h3 {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 p {
   color: black;
   text-align: center;
@@ -124,9 +114,6 @@ p {
   color: black;
 }
 
-<<<<<<< Updated upstream
-* { box-sizing: border-box}
-=======
 .botnav a.active {
   background-color: #8EA604;
   color: white;
@@ -145,7 +132,6 @@ p {
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
->>>>>>> Stashed changes
 
 /* Slideshow container */
 .slideshow-container {
@@ -229,10 +215,6 @@ img {vertical-align: middle;}
   from {opacity: .4} 
   to {opacity: 1}
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
