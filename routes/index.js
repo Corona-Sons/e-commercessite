@@ -57,6 +57,15 @@ MongoClient.connect(url, function(err, client) {
     res.render('signup', { product, title: 'New Member Sign Up' });
   });
 
+  /*GET Mission Statement*/
+  router.get('/mission', async function(req,res, next) {
+    res.render('mission', {title: 'Mission Statement' });
+  });
+
+  router.get('/about', async function(req, res, next) {
+    res.render('/about', {title: 'About Us'});
+  });
+
   // post /signup
 //router.post("/signup", function(req, res, next) {
   //if (
