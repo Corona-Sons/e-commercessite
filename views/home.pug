@@ -1,7 +1,6 @@
 extends layout
 
 block content
-<<<<<<< Updated upstream
   div(class='grid')
     div(class='About Us')
       h2 About Us
@@ -50,57 +49,6 @@ block content
                   p.productPart='$ ' + val.price
                   p.productPart=val.description
       
-=======
-
-  div(class="slideshow-container")
-
-    div(class="mySlides fade")
-        div(class="numbertext") 1 / 3
-          img(src="/images/gloves.jpg" style="width:100%")
-          div(class="text") Gloves
-
-    div(class="mySlides fade")
-        div(class="numbertext") 2 / 3
-          img(src="/images/mask.jpg" style="width:100%")
-          div(class="text") Mask
-
-    div(class="mySlides fade")
-        div(class="numbertext") 3 / 3
-          img(src="/images/sanitizer.jpg" style="width:100%")
-          div(class="text") Sanitizer
-
-    a(class="prev" onclick="plusSlides(-1)") &#10094;
-    a(class="next" onclick="plusSlides(1)") &#10095;
-
-    br
-
-    div(style="text-align:center")
-      span(class="dot" onclick="currentSlide(1)")
-      span(class="dot" onclick="currentSlide(2)")
-      span(class="dot" onclick="currentSlide(3)")
-
-  div(class='content')
-    h2 Featured Product:
-    if product.length == 0
-      p No product to display...
-    else
-      each val in product
-        div(class='product', onClick="location.href='/catalog';")
-          h3=val.title
-          span(id='product' class='material-icons' data-product-id=val._id) 
-          div(class='content')
-          -var pic= val.img
-          img(src=pic alt="Your Browser Doesn't Support Our Image, Sorry.")
-          p.productPart='$ ' + val.price
-          p.productPart=val.description
-          h2 Monthly Newsletter
-          a(href='August_newsletter.pdf') August
-
-  script(src='javascripts/slides.js')
-  
-  
-                
->>>>>>> Stashed changes
 
 
 

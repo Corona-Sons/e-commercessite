@@ -1,15 +1,17 @@
 body {
   padding: 50px;
+<<<<<<< Updated upstream
   background-color: lightgoldenrodyellow;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+=======
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Verdana, sans-serif; margin:0;
+  background-color: #F5BB00;
+>>>>>>> Stashed changes
 }
 
 a {
   color: black;
-}
-
-img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 form {
@@ -128,6 +130,7 @@ p {
   text-align: right;
 }
 
+<<<<<<< Updated upstream
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -220,6 +223,8 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+=======
+>>>>>>> Stashed changes
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -281,4 +286,58 @@ img {vertical-align: middle;}
 
 .show {
   display: block;
+}
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.column {
+  float: left;
+  width: 70.33%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }

@@ -1,22 +1,18 @@
 extends layout
 
 block content
-  div(class='grid')
-    form(action="/login" method="POST")
-      label(for="email") Email:
-      input(
-      type="email"
-      id="email"
-      name="email"
-      placeholder="name@email.com"
-  )
-      label(for="pw") Password:
-      input(
-      type="string"
-      id="password"
-      name="password"
-  )
-  input(type="submit" value="Submit")
-  p
-  | Not a member
-  a(href="/signup") Sign Up Now
+
+  form(method="post")
+  
+    div(class="container")
+      label(for="uname") Username
+      input(type="text" placeholder="Enter Username" name="uname" required)
+
+      label(for="psw") Password
+      input(type="password" placeholder="Enter Password" name="psw" required)
+        
+      button(type="submit") Login
+
+    div(class="container")
+      span(class="psw") New User 
+        a(href="/signup") Sign Up
