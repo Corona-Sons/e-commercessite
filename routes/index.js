@@ -44,7 +44,7 @@ MongoClient.connect(url, function(err, client) {
   /* GET catalog page. */
   router.get('/catalog', async function(req, res, next) {
     const products = await findProducts();
-    res.render('catalog', { products, title: 'Corona & Sons: One Stop COVID-19 Shop', name: req.user.last_name + ', ' + req.user.first_name });
+    res.render('catalog', { products, title: 'Corona & Sons: One Stop COVID-19 Shop'});
   });
 
   /* GET profile page */
