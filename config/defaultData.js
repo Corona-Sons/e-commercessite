@@ -8,7 +8,7 @@ function product_data() {
     const product_one = new Product({
         _id: '1',
         seller_id: '1',
-        title: 'Face Mask',
+        title: 'Face Masks',
         seller: 'Kat Lee',
         description: 'Cover your face with these wonderful hand made face masks.',
         price: 8,
@@ -38,7 +38,7 @@ function product_data() {
     const product_four = new Product({
         _id: '4',
         seller_id: '1',
-        title: 'COVID Couple Love Face Masks',
+        title: 'COVID-Love Face Masks',
         seller: 'Kat Lee',
         description: 'The couple who quarantines together, breaks up. Our face masks will always be there for you.',
         price: 10,
