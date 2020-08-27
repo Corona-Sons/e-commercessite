@@ -1,4 +1,5 @@
 let { Product, User } = require('../models');
+const bcrypt = require('bcryptjs');
 
 // mock data/users
 function product_data() {
@@ -65,8 +66,14 @@ function product_data() {
         .catch(() => console.log('Default products already exist in your database'));
 }
 
-function user_data() {
+async function user_data() {
     console.log('<<-- Creating Users for database -->>');
+    await user_one();
+    await user_two();
+    await user_three();
+}
+
+function user_one() {
 
     const user_one = new User({
         first_name: 'Vance',
@@ -76,6 +83,22 @@ function user_data() {
         member: true,
         password: 'Henry.2018'
     });
+
+    // Hash Password
+    bcrypt.genSalt(10, (err, salt) => 
+        bcrypt.hash(user_one.password, salt, (err, hash) => {
+            if(err) throw err;
+            // Set password to hashed
+            user_one.password = hash;
+            // Save User
+            user_one.save()
+            .then(console.log('User One created'))
+            .catch(console.log('User One Already Exists'));
+    }))
+}
+
+function user_two() {
+
     const user_two = new User({
         first_name: 'Kat',
         last_name: 'Lee',
@@ -84,6 +107,22 @@ function user_data() {
         member: true,
         password: 'PugMaster.123'
     });
+
+    // Hash Password
+    bcrypt.genSalt(10, (err, salt) => 
+        bcrypt.hash(user_two.password, salt, (err, hash) => {
+            if(err) throw err;
+            // Set password to hashed
+            user_two.password = hash;
+            // Save User
+            user_two.save()
+            .then(console.log('User Two created'))
+            .catch(console.log('User Two Already Exists'));
+    }))
+}
+
+function user_three() {
+
     const user_three = new User({
         first_name: 'James',
         last_name: 'Taylor',
@@ -93,13 +132,26 @@ function user_data() {
         password: 'thebe4art'
     });
 
-    const save_promise_one = user_one.save();
-    const save_promise_two = user_two.save();
-    const save_promise_three = user_three.save();
-    return Promise.all([save_promise_one, save_promise_two, save_promise_three])
-        .then(() => console.log('Default users added to database'))
-        .catch(() => console.log('Default users already exist in your database'));
+    // Hash Password
+    bcrypt.genSalt(10, (err, salt) => 
+        bcrypt.hash(user_three.password, salt, (err, hash) => {
+            if(err) throw err;
+            // Set password to hashed
+            user_three.password = hash;
+            // Save User
+            user_three.save()
+            .then(console.log('User Three created'))
+            .catch(console.log('User Three Already Exists'));
+    }))
 }
+
+    // const save_promise_one = user_one.save();
+    // const save_promise_two = user_two.save();
+    // const save_promise_three = user_three.save();
+    // return Promise.all([save_promise_one, save_promise_two, save_promise_three])
+    //     .then(() => console.log('Default users added to database'))
+    //     .catch(() => console.log('Default users already exist in your database'));
+
 
 const setupDefaultData = async () => {
     await product_data();
