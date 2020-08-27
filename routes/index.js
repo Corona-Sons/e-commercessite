@@ -41,6 +41,11 @@ MongoClient.connect(url, function(err, client) {
     res.render('home', { product, title: 'Corona & Sons: One Stop COVID-19 Shop' });
   });
 
+  /*GET About Us page */
+  router.get('/about', async function(req, res, next) {
+      res.render('about', { title: 'Corona & Sons: Your One Stop COVID-19 Shop' });
+  });
+
   /* GET catalog page. */
  router.get('/catalog', async function(req, res, next) {
   const products = await findProducts();
