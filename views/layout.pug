@@ -7,22 +7,19 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", href="https://bootswatch.com/4/lux/bootstrap.min.css")
   body
+  div(class='sitename')
+    h1 Corona & Sons: Your One Stop COVID-19 Shop
     div(class='topnav')
       div.container-fluid
         a(href="/" class='active') Home
+        a(href="/catalog") Product Catalog
         a(href="/users/login") Login
         a(href="/users/signup") Sign Up
-        a(href="/catalog") Product Catalog
-        div(class="dropdown") 
-          button(href="/news" class='dropbtn' onclick='dropDown()') News
-          div(class="dropdown-content" id="myDropdown")
-            a(href="/monthly") Monthly News Letter
-            a(href='/about') About Us
-  
+        a(href='/about') About Us
+        
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous")
-
   block content 
   footer
     div(class='botnav')
@@ -35,8 +32,6 @@ html
           a(href='/login') Login
         ul
           a(href='/signup') Sign Up
-        ul 
-          a(href='/mission') Mission Statement
         ul
           a(href='/about') About Us
         ul
