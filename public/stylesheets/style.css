@@ -102,6 +102,14 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
 .navbar a {
   float: left;
   font-size: 16px;
