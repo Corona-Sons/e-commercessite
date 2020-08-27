@@ -13,15 +13,8 @@ html
       div.container-fluid
         a(href="/" class='active') Home
         a(href="/catalog") Product Catalog
-        a(href="/users/login") Login
-        a(href="/users/signup") Sign Up
         a(href='/about') About Us
-        
-        div(class="dropdown") 
-          button(href="/news" class='dropbtn' onclick='dropDown()') News
-          div(class="dropdown-content" id="myDropdown")
-            a(href="/monthly") Monthly News Letter
-            a(href='/about') About Us
+       
         div
           if (name)
             a(href='/profile')=name
