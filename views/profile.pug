@@ -2,6 +2,7 @@ extends layout
 
 block content
     div(class='grid')
+        h1=firstName
         div(class='profileTools')
             h3 Profile Options
             ul
@@ -12,7 +13,8 @@ block content
                 li
                     button(class='productButton' id='myProductsButton') My Products
                 li
-                    button(class='productButton' id='profileLogoutButton') Logout
+                    a(href='/users/logout')
+                        button(class='productButton' id='profileLogoutButton') Logout
         div(class='memberProducts')
             div(class='productFeed')
                 if products.length == 0
