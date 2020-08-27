@@ -13,7 +13,7 @@ function product_data() {
         description: 'Cover your face with these wonderful hand made face masks.',
         price: 8,
         rating: 5,
-        img: 'https://www.al.com/resizer/wC9swhdipolXrcYluE_O8B212iA=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/BYMAZ4PXUFGLLAQYXXDKXWLGLY.JPG'
+        img: 'https://i.etsystatic.com/22704767/r/il/8071d5/2532152175/il_794xN.2532152175_nwcn.jpg'
     });
     const product_two = new Product({
         _id: '2',
