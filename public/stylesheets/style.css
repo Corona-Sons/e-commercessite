@@ -59,6 +59,7 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -82,11 +83,11 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .botnav a:hover {
-  background-color: #8EA604;
+  background-color: #ddd;
   color: black;
 }
 
@@ -121,7 +122,7 @@ h2 {
 
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 17px;
   color: white;
   text-align: center;
   padding: 14px 16px;
