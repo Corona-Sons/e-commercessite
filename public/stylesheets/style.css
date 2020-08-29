@@ -17,6 +17,10 @@ img:hover {
   color: white;
 }
 
+#companyName {
+  font-size: 50px;
+}
+
 .browse {
   width: 400px;
   height: 50px;
