@@ -19,6 +19,7 @@ router.post('/signup', (req, res) => {
   const { firstName, lastName, email, password, password2, admin } = req.body;
   let errors = [];
 
+  // Validations
   // Check required fields
   if(!firstName || !lastName || !email || !password || !password2) {
     errors.push({ msg: 'Please fill in all fields'});
@@ -34,18 +35,30 @@ router.post('/signup', (req, res) => {
     errors.push({ msg: 'Password must be at least 6 characters'});
   }
 
-
   if(errors.length > 0) {
-  //  window.alert(errors);
+    res.render('signup', {
+      errors,
+      firstName,
+      lastName,
+      email,
+      password,
+      password2
+    })
     console.log(errors);
   } else {
     // Validation passed
     User.findOne({ email: email})
       .then(user => {
         if(user) {
-          errors.push({msg: 'There is an account with this Email already'})
-          // window.alert(errors);
-          console.log(errors);
+          errors.push({msg: 'This Email is already in use'})
+          res.render('signup', {
+            errors,
+            firstName,
+            lastName,
+            email,
+            password,
+            password2
+          })      
         } else {
             // Check Admin Status
             let adminCheck;
@@ -80,6 +93,7 @@ router.post('/signup', (req, res) => {
         
         }
       })
+      .catch((err) => console.log(err));
   }
 });
 
