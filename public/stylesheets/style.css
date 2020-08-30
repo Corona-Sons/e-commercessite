@@ -17,6 +17,10 @@ img:hover {
   color: white;
 }
 
+#companyName {
+  font-size: 50px;
+}
+
 .browse {
   width: 400px;
   height: 50px;
@@ -27,6 +31,13 @@ img:hover {
   padding-bottom: 10px;
 }
 
+.companyLogo {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
 h3 {
   font-size: 24px;
   text-align: center;
@@ -34,6 +45,7 @@ h3 {
   text-transform: capitalize;
   margin-bottom: 10px;
 }
+
 p {
   color: black;
   text-align: center;
@@ -51,6 +63,7 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -74,11 +87,11 @@ p {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .botnav a:hover {
-  background-color: #8EA604;
+  background-color: #ddd;
   color: black;
 }
 
@@ -102,9 +115,18 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 50px;
+} 
+
+h2 {
+  text-align: center;
+}
+
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 17px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -178,7 +200,7 @@ img {
 }
 
 button {
-  background-color: lightslategray;
+  background-color: #717171;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;

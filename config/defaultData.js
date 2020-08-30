@@ -8,7 +8,7 @@ function product_data() {
     const product_one = new Product({
         _id: '1',
         seller_id: '1',
-        title: 'Face Mask',
+        title: 'Face Masks',
         seller: 'Kat Lee',
         description: 'Cover your face with these wonderful hand made face masks.',
         price: 8,
@@ -38,7 +38,7 @@ function product_data() {
     const product_four = new Product({
         _id: '4',
         seller_id: '1',
-        title: 'COVID Couple Love Face Masks',
+        title: 'COVID-Love Face Masks',
         seller: 'Kat Lee',
         description: 'The couple who quarantines together, breaks up. Our face masks will always be there for you.',
         price: 10,
@@ -55,13 +55,81 @@ function product_data() {
         rating: 5,
         img: 'https://preview.thenewsmarket.com/Previews/ADID/StillAssets/640x480/563917.jpg'
     });
-
+    const product_six = new Product({
+        _id: '6',
+        seller_id: '1',
+        title: 'Gray Bandana Adult Face Mask',
+        seller: 'Kat Lee',
+        description: 'Look stylish while being protected.',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/22772535/c/1583/1259/521/399/il/bf4b6c/2525940979/il_340x270.2525940979_kxyz.jpg'
+    });
+    const product_seven= new Product({
+        _id: '7',
+        seller_id: '2',
+        title: 'Respect the Six Feet gloves',
+        seller: 'Vance Weston',
+        description: 'Washable and hypoallergenic courtesy gloves.',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/20858268/r/il/2013fc/2393179601/il_794xN.2393179601_fock.jpg'
+    });
+    const product_eight= new Product({
+        _id: '8',
+        seller_id: '2',
+        title: 'Cat Face Mask',
+        seller: 'Vance Weston',
+        description: 'No kitten...Wear a Mask.',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/15634376/c/1457/1156/581/494/il/ea7b79/2436406393/il_340x270.2436406393_siln.jpg'
+    });
+    const product_nine= new Product({
+        _id: '9',
+        seller_id: '3',
+        title: 'Hand Shit Hand Sanitizer Gel',
+        seller: 'James Taylor',
+        description: 'Never leave home without your Hand Shit.',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/14693420/r/il/aab98d/2541478783/il_794xN.2541478783_73n0.jpg'
+    });
+    const product_ten= new Product({
+        _id: '10',
+        seller_id: '1',
+        title: 'F*%$ Corona Face Mask',
+        seller: 'Kat Lee',
+        description: 'Protect Others While Giving Them the Middle Finger',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/24269134/r/il/9b67ea/2513274503/il_794xN.2513274503_cdb9.jpg'
+    });
+    const product_eleven= new Product({
+        _id: '11',
+        seller_id: '3',
+        title: 'Beard Face Mask',
+        seller: 'James Taylor',
+        description: 'For the Manliest of Men',
+        price: 10,
+        rating: 5,
+        img: 'https://i.etsystatic.com/23165726/r/il/9d93c4/2321460662/il_794xN.2321460662_1r7z.jpg'
+    });
+     
     const save_promise_one = product_one.save();
     const save_promise_two = product_two.save();
     const save_promise_three = product_three.save();
     const save_promise_four = product_four.save();
     const save_promise_five = product_five.save();
-    return Promise.all([save_promise_one, save_promise_two, save_promise_three, save_promise_four, save_promise_five])
+    const save_promise_six = product_six.save();
+    const save_promise_seven = product_seven.save();
+    const save_promise_eight = product_eight.save();
+    const save_promise_nine = product_nine.save();
+    const save_promise_ten = product_ten.save();
+    const save_promise_eleven = product_eleven.save();
+
+    return Promise.all([save_promise_one, save_promise_two, save_promise_three, save_promise_four, save_promise_five, save_promise_six, 
+        save_promise_seven, save_promise_eight, save_promise_nine, save_promise_ten, save_promise_eleven])
         .then(() => console.log('Default products added to database'))
         .catch(() => console.log('Default products already exist in your database'));
 }
