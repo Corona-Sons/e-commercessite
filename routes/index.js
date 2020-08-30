@@ -59,6 +59,14 @@ MongoClient.connect(url, function(err, client) {
    res.render('profile', {products, name: req.user.last_name + ', ' + req.user.first_name});
   })
 
+  /*GET createProduct page */
+  router.get('/createProduct', async function(req, res, next) {
+    const products = await findProducts();
+    res.render('createProduct', { products, title: 'Create New Product'});
+  });
+
+
+
 });
 
 module.exports = router;
