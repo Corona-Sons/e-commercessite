@@ -7,7 +7,8 @@ block content
             h3 Profile Options
             ul
                 li
-                    button(class='productButton' id='productCreateButton') Create Product
+                    a(href='/createProduct')
+                        button(class='productButton' id='productCreateButton') Create Product   
                 li
                     button(class='productButton' id='productEditButton') Edit Product
                 li
@@ -34,3 +35,5 @@ block content
                                 p=val.description
                                 span=val.rating
                                 //want to do a star icon based on rating
+
+                        script(src="./javascripts/createProduct.js")
