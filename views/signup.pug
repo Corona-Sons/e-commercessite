@@ -8,13 +8,13 @@ block content
                     i(class='fas fa-user-plus') Sign Up 
                 if typeof errors != 'undefined'
                     each val in errors
-                        div(class='alert alert-warning alert-dismissible fad show' role='alert')
+                        div(class='alert alert-danger alert-dismissible fad show' role='alert')
                             p(style='margin: 0px 0px 0px 35px')=val.msg
                             p(style='font-size: 8px; margin: 0px 0px 0px 35px') (click to dismiss)
                             button(type='button' style='height: 80px;' class='close' data-dismiss='alert' aria-label='Close')
                 form(action="/users/signup" method='POST')
                     div(class='form-group')
-                        label(for='firstName') Name
+                        label(for='firstName') First Name
                             -
                                 if (firstName!='undefined') 
                                     var value1=firstName 
@@ -29,7 +29,7 @@ block content
                             value=value1
                         )
                     div(class='form-group')
-                        label(for='lastName') Name
+                        label(for='lastName') Last Name
                             -
                                 if (lastName!='undefined') 
                                     var value2=lastName 
@@ -91,7 +91,7 @@ block content
                     div(class='form-group')
                         label(for='admin') Admin Code
                         input(
-                            type='admin'
+                            type='password'
                             id='admin'
                             name='admin'
                             class='form-control'
