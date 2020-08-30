@@ -86,7 +86,13 @@ router.post('/signup', (req, res) => {
               // Save User
               newUser.save()
                 .then(user => {
-                  res.redirect('/users/login');
+                  if(user.admin === true) {
+                    req.flash('admin_msg', 'Welcome new Administrator, Please Login')
+                    res.redirect('/users/login');
+                  } else {
+                    req.flash('success_msg', 'You are now Signed up, Please Login')
+                    res.redirect('/users/login');
+                  }
                 })
                 .catch(err => console.log(err));
           }))
@@ -99,11 +105,11 @@ router.post('/signup', (req, res) => {
 
 // Login Handle
 router.post('/login', (req, res, next) => {
-  passport.authenticate('local', {
-    successRedirect: '/profile',
-    failureRedirect: '/users/login',
-    failureFlash: true
-  })(req, res, next);
+      passport.authenticate('local', {
+        successRedirect: '/profile',
+        failureRedirect: '/users/login',
+        failureFlash: true
+      })(req, res, next);
 })
 
 // Logout Handle
