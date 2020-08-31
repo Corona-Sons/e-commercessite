@@ -6,6 +6,7 @@
     "start": "node ./bin/www nodemon"
   },
   "dependencies": {
+    "@casl/ability": "^4.1.5",
     "assert": "^2.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
