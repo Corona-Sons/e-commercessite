@@ -35,6 +35,15 @@ MongoClient.connect(url, function(err, client) {
     return collection.find({seller_id}).toArray();
   }
 
+  // Search bar set-up
+  //db.products.createIndex( { title: 'text' } );
+   //db.products.find(
+   // { $text: { $search: "masks gloves sanitizer" } },
+    //{ score: { $meta: "textScore" } }
+ //).sort( { score: { $meta: "textScore" } } );
+ 
+
+
   /* GET home page. */
   router.get('/', async function(req, res, next) {
     const product = await featuredProduct();
