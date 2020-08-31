@@ -3,6 +3,7 @@ var router = express.Router();
 const User = require('../models/Users');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+//const { AbilityBuilder, Ability } = require('casl')
 
 /* GET Login page. */
 router.get('/login', function(req, res, next) {
@@ -103,6 +104,44 @@ router.post('/signup', (req, res) => {
   }
 });
 
+// CASL ability (basic user rules)
+//function defineAbilitiesFor(user) {
+  //const { can, cannot, rules } = new AbilityBuilder();
+
+  //can browse products
+  //can('read', 'Products');
+  //cannot create, edit, or delete products
+  //cannot('create', 'update', 'delete', 'Products', {
+   // createdAt: { $lt: Date.now() - 24 * 60 * 60 * 1000 }
+  //});
+
+  //return new Ability(rules);
+//};
+
+//*****CASL ability (admin rules)*****//
+
+//function defineAbilitiesFor(admin) {
+ // const { can, cannot, rules } = new AbilityBuilder();
+
+  //can browse products, create, edit, or delete products, 
+  //and promote/demote others but not him/herself
+ // can('create', 'read', 'update', 'delete', 'Products');
+  //cannot demote self
+  //cannot('deleteAdmin',  {
+   // createdAt: { $lt: Date.now() - 24 * 60 * 60 * 1000 }
+ //});
+
+  //return new Ability(rules);
+//};
+  
+//const ANONYMOUS_ABILITY = defineAbilitiesFor(null)
+
+//module.exports = function createAbilities(req, res, next) {
+ // req.ability = req.user.email ? defineAbilitiesFor(req.user) : ANONYMOUS_ABILITY
+ // next()
+//}
+//******end of CASL code****//
+
 // Login Handle
 router.post('/login', (req, res, next) => {
       passport.authenticate('local', {
@@ -118,8 +157,5 @@ router.get('/logout', (req, res) => {
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
 })
-
-
-
 
 module.exports = router;
