@@ -69,7 +69,7 @@ MongoClient.connect(url, function(err, client) {
   })
 
   /*GET createProduct page */
-  router.get('/createProduct', async function(req, res, next) {
+  router.get('/createProduct', ensureAuthenticated, async function(req, res, next) {
     const products = await findProducts();
     res.render('createProduct', { products, title: 'Create New Product'});
   });

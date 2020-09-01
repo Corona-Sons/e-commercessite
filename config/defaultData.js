@@ -144,6 +144,7 @@ async function user_data() {
 function user_one() {
 
     const user_one = new User({
+        _id: '2',
         first_name: 'Vance',
         last_name: 'Weston',
         email: 'vweston@student.neumont.edu',
@@ -168,6 +169,7 @@ function user_one() {
 function user_two() {
 
     const user_two = new User({
+        _id: '1',
         first_name: 'Kat',
         last_name: 'Lee',
         email: 'kalee@student.neumont.edu',
@@ -192,6 +194,7 @@ function user_two() {
 function user_three() {
 
     const user_three = new User({
+        _id: '3',
         first_name: 'James',
         last_name: 'Taylor',
         email: 'jtaylor@student.neumont.edu',

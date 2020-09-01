@@ -6,14 +6,14 @@ function selectedProduct(id) {
     let element = document.getElementById(id);
     let product = element.querySelectorAll(".productPart");
 
-    let h1 = document.getElementById('title');
+    let h3 = document.getElementById('title');
     let img = document.getElementById('img');
     let pS = document.getElementById('seller');
     let pP = document.getElementById('price');
     let pD = document.getElementById('description');
     let span = document.getElementById('rating');
 
-    h1.innerHTML = product[0].innerHTML;
+    h3.innerHTML = product[0].innerHTML;
     img.setAttribute('src', product[1].src);
     pS.innerHTML =product[2].innerHTML;
     pP.innerHTML =product[3].innerHTML;
@@ -29,8 +29,8 @@ function detailsDisplay() {
     productDetails.style.display = 'block';
     productDetails.style.position = 'fixed';
     productDetails.style.width = '500px';
-    productDetails.style.height = '200px';
-    productDetails.style.top = '40%';
+    productDetails.style.height = '600px';
+    productDetails.style.top = '25%';
     productDetails.style.left = '50%';
     productDetails.style.marginTop = '-100px';
     productDetails.style.marginLeft = '-250px';

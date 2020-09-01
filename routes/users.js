@@ -3,6 +3,7 @@ var router = express.Router();
 const User = require('../models/Users');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+
 //const { AbilityBuilder, Ability } = require('casl');
 //const query = toMongoQuery(ability.rulesFor('read', 'Post'));
 
@@ -161,6 +162,14 @@ router.get('/logout', (req, res) => {
   req.logout();
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
+})
+
+//Fake contact Handle
+router.post('/contact', (req, res) => {
+  const {textbox} = req.body;
+  console.log(textbox);
+  req.flash('success_msg', 'Thank you for reaching out!');
+  res.redirect('/about');
 })
 
 module.exports = router;

@@ -7,41 +7,45 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", href="https://bootswatch.com/4/lux/bootstrap.min.css")
   body
-  div(class='sitename')
-    img(class='companyLogo' src='./images/d2485474-173a-496b-a6fd-4eac6440566e_200x200.png' alt='company_logo')
-    h1(id='companyName') Corona & Sons: Your One Stop COVID-19 Shop
-    div(class='topnav')
-      div.container-fluid
+  div(class='header')
+    div(class='siteName')
+      h1(class='companyName') Corona & Sons 
+      img(class='companyLogo' src='./images/logo.png' alt='company_logo')
+      h1(class='companyName') COVID-19 Shop
+    div(class='topNav')
+      div.pages
         a(href="/" class='active') Home
         a(href="/catalog") Product Catalog
-
-        div
-          if (name)
-            a(href='/profile')=name
-          else
-            a(href="/users/login") Login
-            a(href="/users/signup") Sign Up
-            a(href='/about') About Us
+        a(href='/about') About Us
+      div.login
+        if (name)
+          a(href='/profile')=name
+        else
+          a(href="/users/login") Login
+          a(href="/users/signup") Sign Up
 
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
     script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous")
     script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous")
   block content
   footer
-    div(class='botnav')
-      div.container-fluid
-        ul
-          a(href='/') Home
-        ul
-          a(href='/catalog') Product Catalog
-        ul
-          a(href='/users/login') Login
-        ul
-          a(href='/users/signup') Sign Up
-        ul
-          a(href='/about') About Us
-        ul
-          a Website by Vance Weston, Katherine Lee, & James Taylor
+    div(class='botNav')
+      div.footerLayout
+        div.pages2
+            a(href='/') Home
+            p='|'
+            a(href='/catalog') Product Catalog
+            p='|'
+            a(href='/about') About Us
+        div.login2
+          if (name)
+            a(href='/profile')=name
+          else
+            a(href="/users/login") Login
+            p='|'
+            a(href="/users/signup") Sign Up
+      p Website by Vance Weston, Katherine Lee, & James Taylor
+
 
 script(src='javascripts/navbar.js')
 
