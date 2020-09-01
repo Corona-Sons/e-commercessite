@@ -18,8 +18,8 @@ html
         a(href="/catalog") Product Catalog
         a(href='/about') About Us
       div.login
-        if (name)
-          a(href='/profile')=name
+        if (fullName != 'test')
+          a(href='/profile')=fullName
         else
           a(href="/users/login") Login
           a(href="/users/signup") Sign Up
@@ -38,8 +38,8 @@ html
             p='|'
             a(href='/about') About Us
         div.login2
-          if (name)
-            a(href='/profile')=name
+          if (fullName != 'test')
+            a(href='/profile')=fullName
           else
             a(href="/users/login") Login
             p='|'

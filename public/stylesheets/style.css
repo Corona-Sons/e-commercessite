@@ -6,10 +6,6 @@ body {
 
 /* Header */
 
-.header {
-  margin-bottom: 45px;
-}
-
 .siteName {
 	display: flex;
 	flex-direction: row;
@@ -194,7 +190,7 @@ body {
 .slogan {
   text-align: center;
   padding: 50px;
-  margin: auto auto 50px auto;
+  margin: 50px auto 50px auto;
 }
 
 .slogan h1{
@@ -253,7 +249,7 @@ body {
 
 .searchBar {
   text-align: center;
-  margin-bottom: 45px;
+  margin: 50px 0 45px 0;
 }
 
 .searchBar h1 {
@@ -310,7 +306,7 @@ body {
 /**//*About Us*/
 
 .about {
-  margin: 0 0 20px 0;
+  margin: 50px 0 20px 0;
 }
 
 .about h2 {
@@ -355,6 +351,11 @@ body {
   margin: 0 0 3em 0;
 }
 
+#backButton {
+  margin: 50px auto 0 auto;
+  width: 670px;
+}
+
 /*-----------------------------------*/
 
 /* Profile */
@@ -382,4 +383,3 @@ body {
 .userProducts .product {
   height: auto;
 }
-

@@ -20,7 +20,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 // Database Set Up
-InitiateMongoServer().then(setupDefaultData);
+InitiateMongoServer().then(setupDefaultData).catch((err) => {throw err});
 
 // setting up express
 const app = express();

@@ -216,14 +216,6 @@ function user_three() {
     }))
 }
 
-    // const save_promise_one = user_one.save();
-    // const save_promise_two = user_two.save();
-    // const save_promise_three = user_three.save();
-    // return Promise.all([save_promise_one, save_promise_two, save_promise_three])
-    //     .then(() => console.log('Default users added to database'))
-    //     .catch(() => console.log('Default users already exist in your database'));
-
-
 const setupDefaultData = async () => {
     await product_data();
     await user_data();

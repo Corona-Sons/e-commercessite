@@ -1,6 +1,15 @@
-extends layout
-
-block content
+doctype html
+html
+  head
+    title Coronavirus
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //--script(src='/javascripts/slides.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="https://bootswatch.com/4/lux/bootstrap.min.css")
+  body
+    div#backButton
+        a(href='/')
+            button(type='submit' class='btn btn-primary btn-block') Back to Home
     div(class="row mt-5" id='signUp')
         div(class="col-md-6 m-auto")
             div(class="card card-body")
