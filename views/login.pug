@@ -18,23 +18,19 @@ html
                 if success_msg != ''
                     div(class='alert alert-success alert-dismissible fad show' role='alert')
                         p(style='margin: 0px 0px 0px 35px')=success_msg
-                        p(style='font-size: 8px; margin: 0px 0px 0px 35px') (click to dismiss)
-                        button(type='button' style='height: 80px;' class='close' data-dismiss='alert' aria-label='Close')
+                        button(type='button'  class='close' data-dismiss='alert' aria-label='Close')
                 if admin_msg != ''
                     div(class='alert alert-success alert-dismissible fad show' role='alert')
                         p(style='margin: 0px 0px 0px 35px')=admin_msg
-                        p(style='font-size: 8px; margin: 0px 0px 0px 35px') (click to dismiss)
-                        button(type='button' style='height: 80px;' class='close' data-dismiss='alert' aria-label='Close')
+                        button(type='button'  class='close' data-dismiss='alert' aria-label='Close')
                 if error_msg != ''
-                    div(class='alert alert-danger alert-dismissible fad show' role='alert')
+                    div(class='alert alert-warning alert-dismissible fad show' role='alert')
                         p(style='margin: 0px 0px 0px 35px')=error_msg
-                        p(style='font-size: 8px; margin: 0px 0px 0px 35px') (click to dismiss)
-                        button(type='button' style='height: 80px;' class='close' data-dismiss='alert' aria-label='Close')
+                        button(type='button'  class='close' data-dismiss='alert' aria-label='Close')
                 if error != ''
-                    div(class='alert alert-danger alert-dismissible fad show' role='alert')
+                    div(class='alert alert-warning alert-dismissible fad show' role='alert')
                         p(style='margin: 0px 0px 0px 35px')=error
-                        p(style='font-size: 8px; margin: 0px 0px 0px 35px') (click to dismiss)
-                        button(type='button' style='height: 80px;' class='close' data-dismiss='alert' aria-label='Close')
+                        button(type='button'  class='close' data-dismiss='alert' aria-label='Close')
                 form(action="/users/login" method='POST')
                     div(class='form-group')
                         label(for='email') Email

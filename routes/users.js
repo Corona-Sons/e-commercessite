@@ -111,7 +111,10 @@ router.post('/signup', (req, res) => {
               adminCheck = false;
             }
 
+            let _id = Math.floor(Math.random()*(100000000000000000000));
+
           const newUser = new User({
+            _id: _id,
             first_name: firstName,
             last_name: lastName,
             email: email,
